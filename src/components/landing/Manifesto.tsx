@@ -44,7 +44,7 @@ export function Manifesto() {
           transition={{ duration: 0.9, delay: 0.2 }}
           className="mt-8 max-w-2xl text-lg text-white/60"
         >
-          Copy-trading puts you behind the move. Conduence puts you at the front of it, Orchestrate
+          Copy trading puts you behind the move. Conduence puts you at the front of it, Orchestrate
           the agents others end up watching.
         </motion.p>
 

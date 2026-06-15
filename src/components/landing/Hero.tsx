@@ -10,39 +10,11 @@ export function Hero() {
       {/* Background image */}
       <img
         src={heroCloudsSrc.src}
-        alt="Monochrome cloudscape"
+        alt="Monochrome night sky with constellation network over rolling hills"
         width={1920}
         height={1080}
-        className="absolute inset-0 h-full w-full object-cover saturate-0"
+        className="absolute inset-0 h-full w-full object-cover"
         style={{ zIndex: 0 }}
-      />
-
-      {/* Vignette / readability gradients */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          zIndex: 1,
-          background:
-            "radial-gradient(ellipse at center, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.75) 60%, rgba(0,0,0,0.95) 100%)",
-        }}
-      />
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          zIndex: 1,
-          background:
-            "linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.9) 100%)",
-        }}
-      />
-
-      {/* Grain */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-[0.12] mix-blend-overlay"
-        style={{
-          zIndex: 2,
-          backgroundImage:
-            "repeating-linear-gradient(0deg, rgba(255,255,255,0.5) 0px, rgba(255,255,255,0.5) 1px, transparent 1px, transparent 3px)",
-        }}
       />
 
       {/* Content — centered */}

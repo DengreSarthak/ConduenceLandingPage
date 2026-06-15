@@ -52,26 +52,26 @@ export function AgentsScroll() {
   const concepts = [
     {
       tag: "TOOLS",
-      title: "Live market inputs",
-      body: "Structured feeds, news, and venue data in one reasoning layer.",
+      title: "Preloaded primitives",
+      body: "Market data, news feeds, charting, and venue APIs, ready to wire into any agent without building integrations from scratch.",
       pos: "left-[6%] top-[16%]",
     },
     {
-      tag: "TEMPLATES",
-      title: "Fork & remix",
-      body: "Start from proven strategies. Modify. Run them as your own.",
+      tag: "SUB AGENT TEMPLATES",
+      title: "Start from proven roles",
+      body: "Research, sizing, execution, and analysis templates you can fork, remix, and drop onto the canvas in seconds.",
       pos: "right-[6%] top-[16%]",
     },
     {
       tag: "MIND AGENTS",
-      title: "Specialist roles",
-      body: "Research, sizing, and execution agents converge on a single call.",
+      title: "Specialist intelligence",
+      body: "Subscribe to creator built agents for news, arbitrage, and mispricing. Plug them in instead of running your own compute.",
       pos: "left-[6%] bottom-[16%]",
     },
     {
-      tag: "HUMAN GATE",
-      title: "You stay in control",
-      body: "Every meaningful action pauses for your approval before capital moves.",
+      tag: "CONNECTORS",
+      title: "Telegram & Discord",
+      body: "Get trade signals and event alerts where you already are. Verify and execute in one tap. Full control, even away from the dashboard.",
       pos: "right-[6%] bottom-[16%]",
     },
   ];
@@ -172,37 +172,6 @@ export function AgentsScroll() {
         </div>
       </section>
     </>
-  );
-}
-
-/* ============================================================
-   WORKFLOW
-   ============================================================ */
-export function Workflow() {
-  return (
-    <section id="workflow" className="relative py-32 px-6 bg-white text-black">
-      <div className="mx-auto max-w-6xl">
-        
-        <h2 className="text-4xl sm:text-6xl font-display tracking-tight text-balance max-w-3xl">
-          Anyone can create their own workflow.
-        </h2>
-        <div className="mt-16 border border-black/15 p-8 sm:p-12">
-          <div className="grid grid-cols-3 gap-px bg-black/10 border border-black/10">
-            {["TOOLS", "TEMPLATES", "ANALYZERS"].map((l) => (
-              <div
-                key={l}
-                className="bg-white p-8 text-center font-mono text-xs sm:text-sm tracking-[0.2em]"
-              >
-                {l}
-              </div>
-            ))}
-          </div>
-          <div className="bg-black text-white p-6 text-center font-mono text-xs sm:text-sm tracking-[0.2em] mt-6">
-            ↓ ORCHESTRATED BY YOU ↓
-          </div>
-        </div>
-      </div>
-    </section>
   );
 }
 

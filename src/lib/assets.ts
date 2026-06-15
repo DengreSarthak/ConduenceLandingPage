@@ -1,6 +1,6 @@
-import heroClouds from "@/assets/hero-clouds.jpg";
+import heroOrchestration from "@/assets/hero-orchestration-v3.jpg";
 
-export const heroCloudsSrc = heroClouds;
+export const heroCloudsSrc = heroOrchestration;
 export const logoWhiteSrc = "/images/conduence-logo-white.png";
 export const logoBlackSrc = "/images/conduence-logo-black.png";
 
@@ -14,3 +14,4 @@ export const featObservabilitySrc = "/images/feat-observability.jpg";
 export const featCanvasSrc = "/images/feat-canvas.jpg";
 export const featMindSrc = "/images/feat-mind.jpg";
 export const featConnectorsSrc = "/images/feat-connectors.jpg";
+export const featByosSrc = "/images/feat-byos.jpg";

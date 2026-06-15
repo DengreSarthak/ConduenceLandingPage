@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import {
   featCanvasSrc,
   featConnectorsSrc,
+  featByosSrc,
   featGraphSrc,
   featMindSrc,
   featObservabilitySrc,
@@ -23,37 +24,43 @@ const pillars: Pillar[] = [
   {
     kicker: "RELATION GRAPH",
     title: "Agentic Knowledge Graph",
-    body: "A graph of how real-world events influence each other, authored by you. The orchestrator agent traverses it in milliseconds instead of reasoning from scratch — so your perspective, your edges, your weights become the agent's intuition. Reasoning drops from seconds to milliseconds.",
+    body: "A graph of how real world events influence each other, authored by you. The orchestrator agent traverses it in milliseconds instead of reasoning from scratch, so your perspective, your edges, your weights become the agent's intuition. Reasoning drops from seconds to milliseconds.",
     image: featGraphSrc,
   },
   {
     kicker: "SIMULATION",
     title: "Paper Trading",
-    body: "Test a strategy or an entire AI-agent workflow against live Polymarket and Kalshi data — without putting real money on the line. Validate edge, debug behavior, and tune parameters before going live.",
+    body: "Test a strategy or an entire AI agent workflow against live Polymarket and Kalshi data, without putting real money on the line. Validate edge, debug behavior, and tune parameters before going live.",
     image: featPaperSrc,
   },
   {
     kicker: "OBSERVABILITY",
     title: "Trade Observability",
-    body: "Every trade rendered as a graph: which agent called which tool, what each returned, cost per tool call, cost per Mind Agent, and the full decision path. Backtrack any move and pinpoint exactly where things went right — or wrong.",
+    body: "We use LangSmith to render every trade as a graph: which agent called which tool, what each returned, cost per tool call, cost per Mind Agent, and the full decision path. Backtrack any move and pinpoint exactly where things went right, or wrong.",
     image: featObservabilitySrc,
   },
   {
     kicker: "BUILDER",
     title: "Canvas",
-    body: "Compose your own agent workflow on a drag-and-drop canvas. Pre-loaded tools, sub-agent templates, the orchestrator, and Mind Agents — wire them together without writing a single line of code. Explore the strategy that works best for you.",
+    body: "Compose your own agent workflow on a drag and drop canvas. Preloaded tools, sub agent templates, the orchestrator, and Mind Agents. Wire them together without writing a single line of code. Explore the strategy that works best for you.",
     image: featCanvasSrc,
   },
   {
     kicker: "MARKETPLACE",
     title: "Mind Agents",
-    body: "We extract the complexity so anyone can use the final product through micropayments. Monetize your strategy or your entire workflow as a Mind Agent. Subscribe to one and plug it into your own workflow, or run it standalone. With Mind Agents that emit trades, you're live within minutes.",
+    body: "We extract the complexity so anyone can use the final product through micropayments. Monetize your strategy or your entire workflow as a Mind Agent. Your strategy stays private while you earn from it. Subscribe to one and plug it into your own workflow, or run it standalone. With Mind Agents that emit trades, you're live within minutes.",
     image: featMindSrc,
   },
   {
+    kicker: "BYOS",
+    title: "Bring Your Own Strategy",
+    body: "Bring your own strategy and we handle the rest: building the AI agent workflow, publishing it, and making it available to other users. We keep a small percentage of revenue. You earn the rest. Your strategy stays private.",
+    image: featByosSrc,
+  },
+  {
     kicker: "CONNECTORS",
-    title: "Telegram & Discord",
-    body: "Connect Telegram and Discord to your workflow. Get trade signals and event alerts where you already are — so you can take command while away from the dashboard. When your agent finds an opportunity, verify it and execute in one tap. You stay in full control.",
+    title: "Connectors",
+    body: "Connect Telegram and Discord to your workflow. Get trade signals and event alerts where you already are, so you can take command while away from the dashboard. When your agent finds an opportunity, verify it and execute in one tap. You stay in full control.",
     image: featConnectorsSrc,
   },
 ];
@@ -92,7 +99,7 @@ export function Pillars() {
       </div>
 
       <div className="mx-auto grid max-w-[1500px] grid-cols-12 gap-x-10 gap-y-10 px-6 py-10 md:py-14 sm:px-10">
-        <div className="col-span-12 flex flex-col md:col-span-5">
+        <div className="col-span-12 flex flex-col md:col-span-5 md:-mt-3 lg:-mt-4">
           <h2 className="font-display text-3xl leading-[1.05] tracking-tight md:text-4xl lg:text-5xl">
             Everything you need to
             <br />
@@ -107,7 +114,7 @@ export function Pillars() {
                   <button
                     type="button"
                     onClick={() => setActive(i)}
-                    className="grid w-full grid-cols-[48px_1fr_16px] items-center gap-4 border-t border-black/10 py-4 text-left"
+                    className="grid w-full grid-cols-[48px_1fr] items-center gap-4 border-t border-black/10 py-4 text-left"
                   >
                     <span
                       className={`font-mono text-xs tracking-[0.2em] transition-colors ${
@@ -123,11 +130,6 @@ export function Pillars() {
                     >
                       {p.title}
                     </span>
-                    <span
-                      className={`h-1.5 w-1.5 rounded-sm transition-colors ${
-                        isActive ? "bg-black" : "bg-transparent"
-                      }`}
-                    />
                   </button>
                   <div className="absolute -bottom-px left-0 right-0 h-px overflow-hidden bg-transparent">
                     {isActive && (
@@ -144,7 +146,7 @@ export function Pillars() {
           </ul>
         </div>
 
-        <div className="col-span-12 md:col-span-7">
+        <div className="col-span-12 md:col-span-7 md:mt-4 lg:mt-6">
           <AnimatePresence mode="wait">
             <motion.div
               key={current.title}
@@ -152,9 +154,9 @@ export function Pillars() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-              className="flex flex-col"
+              className="flex flex-col md:pl-6 lg:pl-10"
             >
-              <div className="relative aspect-[16/7] w-full overflow-hidden rounded-sm border border-black/10 bg-white">
+              <div className="relative aspect-[16/7] w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl overflow-hidden rounded-sm border border-black/10 bg-white">
                 <div
                   className="pointer-events-none absolute inset-0 opacity-[0.4]"
                   style={{

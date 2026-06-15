@@ -23,7 +23,7 @@ function MatrixCanvas() {
     let cols = Math.floor(w / fontSize);
     let drops = new Array(cols).fill(1);
     const glyphs =
-      "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホ0123456789ABCDEF<>/?*+-";
+      "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホ0123456789ABCDEF<>/?*+";
 
     const onResize = () => {
       w = canvas.width = canvas.offsetWidth;
@@ -116,7 +116,7 @@ export function MatrixMantras() {
               speed={45}
               maxIterations={20}
               useOriginalCharsOnly={false}
-              characters="アイウエオカキクケコ01<>/?*+-ABCDEF"
+              characters="アイウエオカキクケコ01<>/?*+ABCDEF"
               className="text-white"
               encryptedClassName="text-emerald-300/70"
               parentClassName="inline-flex"
