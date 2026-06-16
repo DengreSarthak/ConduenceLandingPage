@@ -1,6 +1,6 @@
-import heroOrchestration from "@/assets/hero-orchestration-v3.jpg";
-
-export const heroCloudsSrc = heroOrchestration;
+export const heroCloudsSrc = {
+  src: "/images/hero-section.png",
+};
 export const logoWhiteSrc = "/images/conduence-logo-white.png";
 export const logoBlackSrc = "/images/conduence-logo-black.png";
 

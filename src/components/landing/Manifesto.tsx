@@ -32,7 +32,7 @@ export function Manifesto() {
           style={{ fontSize: "clamp(2rem, 5.5vw, 5.5rem)" }}
         >
           Don't be a follower,{" "}
-          <span className="whitespace-nowrap">
+          <span className="whitespace-nowrap [word-spacing:0.18em]">
             <span className="font-normal italic">Be the signal</span> others copy
           </span>
         </motion.h2>
